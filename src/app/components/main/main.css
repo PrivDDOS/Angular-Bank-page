@@ -18,10 +18,12 @@ html, body {
 }
 
 #header {
-    height: 60px;
+    position: sticky;
+    height: 80px;
     display: flex;
     align-items: center;
     margin: 0 80px;
+    z-index: 1002;
 }
 
 .nav-container {
@@ -33,9 +35,16 @@ html, body {
 }
 
 .nav-left .btn {
-    width: 120px;
+    width: 160px;
     height: 40px;
     border: none;
-    background-color: hsl(192, 69%, 51%);
+    background-image: linear-gradient(200deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
     border-radius: 30px;
+    cursor: pointer;
+}
+
+.nav-left .btn p {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
 }
