@@ -129,3 +129,93 @@ html, body {
     background-size: 900px;
     background-repeat: no-repeat;
 }
+
+/* Main mid */
+.main-middle {
+    width: 100%;
+    padding-left: 120px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-middle h1 {
+    font-size: 36px;
+    font-weight: 100;
+    padding-bottom: 30px;
+}
+
+.main-middle p {
+    width: 42%;
+    padding-bottom: 50px;
+    font-weight: 100;
+}
+
+.feauture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bank-feature .img {
+    padding-bottom: 30px;
+}
+
+.bank-feature h4 {
+    font-size: 28px;
+    font-weight: 100;
+    padding-bottom: 20px;
+}
+
+.bank-feature p {
+    width: 70%;
+    font-weight: 100;
+}
+
+.articles {
+    width: 100%;
+    padding-left: 120px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.articles h1 {
+    font-size: 40px;
+    font-weight: 100;
+    padding-bottom: 40px;
+}
+
+.articles-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.articles-content {
+    padding-right: 30px;
+}
+
+.articles-content .img {
+    width: 308px;
+    height: 200px;
+}
+
+.articles-content .img img {
+    width: 240px;
+    height: 200px;
+    padding-bottom: 40px;
+}
+
+.articles-content h4 {
+    width: 55%;
+    width: 240px;
+    padding-bottom: 20px;
+}
+
+.articles-content p {
+    width: 240px;
+    width: 80%;
+}
