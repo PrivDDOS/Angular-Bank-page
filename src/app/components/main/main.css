@@ -13,8 +13,8 @@ html, body {
 }
 
 #container {
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    width: 100vw;
 }
 
 /* Header section*/
@@ -48,19 +48,31 @@ html, body {
 }
 
 .nav-mid .nav-link {
-    position: relative;
     height: 40px;
     margin: 0 20px;
 }
 
 .nav-link a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
     text-decoration: none;
     color: hsl(233, 8%, 62%);
+    padding-bottom: 4px;
 }
 
 .nav-link a::after {
+    content: "";
     position: absolute;
-
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: hsl(136, 64%, 51%);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease;
 }
 
 .nav-link a:hover {
@@ -69,7 +81,12 @@ html, body {
     text-decoration: none;
 }
 
-.nav-left .btn {
+.nav-link a:hover::after,
+.nav-link a.active::after {
+    transform: scaleX(1);
+}
+
+.nav-right .btn {
     width: 160px;
     height: 40px;
     border: none;
@@ -77,6 +94,16 @@ html, body {
     color: white;
     border-radius: 30px;
     cursor: pointer;
+}
+
+.nav-right .btn:hover {
+    color: black;
+}
+
+.nav-right .mobile-menu {
+    display: none;
+    cursor: pointer;
+    border: none;
 }
 
 
@@ -121,6 +148,10 @@ html, body {
     color: white;
     border-radius: 30px;
     cursor: pointer;
+}
+
+.main-topleft .btn:hover {
+    color: black;
 }
 
 .main-topright {
@@ -216,14 +247,13 @@ html, body {
 }
 
 .articles-content p {
-    width: 240px;
     width: 80%;
 }
 
 /* Footer */
 #footer {
     width: 100%;
-    height: auto;
+    height: 200px;
     background-color: hsl(233, 26%, 24%);
     display: flex;
     flex-direction: row;
@@ -235,13 +265,283 @@ html, body {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    padding-left: 60px;
 }
 
 .footer-left .left {
     display: flex;
     flex-direction: column;
+    padding-left: 40px;
+}
+
+.left .top-img {
+    padding-bottom: 40px;
+}
+
+.left .bottom-img {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-left .mid {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.mid .btn {
+    padding-bottom: 20px;
+}
+
+.mid .btn button {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.mid .btn button:hover {
+    cursor: pointer;
+    color: rgb(7, 139, 7);
+}
+
+.footer-left .right {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.right .btn {
+    padding-bottom: 20px;
+}
+
+.right .btn button {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.right .btn button:hover {
+    cursor: pointer;
+    color: rgb(7, 139, 7);
+}
+
+.bottom-img .social-icon {
+    cursor: pointer;
 }
 
 .footer-right {
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-right .btn {
+    padding-bottom: 30px;
+    padding-left: 100px;
+}
+
+.footer-right .btn button {
+    width: 160px;
+    height: 40px;
+    border: none;
+    background-image: linear-gradient(200deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.footer-right .btn button:hover {
+    color: black;
+}
+
+.footer-right .trademark {
+    color: white;
+}
+
+.trademark .copyright {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+
+/* Responsive CSS */
+@media only screen and (max-width: 768px) {
+    .nav-mid {
+        display: none;
+    }
+
+    .nav-right .btn {
+        display: none;
+    }
+
+    .nav-right .mobile-menu {
+        display: block;
+    }
+
+    .main-top {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .main-topleft {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 70px;
+    }
+
+    .main-topleft p {
+        width: 54%;
+    }
+
+
+    .main-topright {
+        width: 100%;
+    }
+
+    .main-middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .main-middle h1 {
+        width: 40%;
+    }
+
+    .feauture-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .bank-feature .text {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bank-feature p {
+        width: 45%;
+    }
+
+    .articles {
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .articles h1 {
+        padding-right: 20px;
+    }
+
+    .articles-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .articles-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 80px;
+    }
+
+    .articles-content .img {
+        width: auto;
+        height: auto;
+    }
+
+    .articles-content .img img {
+        width: 600px;
+        height: 300px;
+        padding: 0;
+    }
+
+    .articles-content h4 {
+        padding: 40px 0 20px 0;
+        text-align: center;
+    }
+
+    .articles-content p {
+        width: 38%;
+    }
+
+    #footer {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .footer-left .left {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .left .top-img {
+        padding-bottom: 40px;
+    }
+
+    .left .bottom-img {
+        display: flex;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    .footer-left .mid {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mid .btn {
+        padding-bottom: 20px;
+    }
+
+    .footer-left .right {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .right .btn {
+        padding-bottom: 20px;
+    }
+
+    .footer-right {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-right .btn {
+        padding-left: 0;
+        padding-bottom: 30px;
+    }
 }
