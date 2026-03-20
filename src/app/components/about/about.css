@@ -116,7 +116,7 @@ html, body {
     flex-direction: column;
 }
 
-.main-top {
+.about {
     width: 100%;
     height: auto;
     display: flex;
@@ -126,7 +126,7 @@ html, body {
     flex-direction: row;
 }
 
-.main-topleft {
+.about-left {
     width: 60%;
     background-image: url(/assets/images/bg-intro-desktop.svg);
     background-size: 900px;
@@ -134,20 +134,140 @@ html, body {
     background-position: center;
 }
 
-.main-topright {
+.about-right {
     width: 40%;
 }
 
-.main-topright h1 {
+.about-right h1 {
     font-size: 50px;
     font-weight: 100;
     padding-bottom: 40px;
     color: black;
 }
 
-.main-topright p {
+.about-right p {
     font-size: 28px;
     font-weight: 100;
+    line-height: 40px;
+}
+
+.story {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 30px 0;
+}
+
+.story-left {
+    width: 50%;
+    padding: 0 40px;
+}
+
+.story-left h1 {
+    font-size: 50px;
+    font-weight: 100;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.story-left p {
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 44px;
+    text-align: center;
+}
+
+.story-right {
+    width: 50%;
+    padding: 0 40px;
+}
+
+.story-right img {
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.work {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.work h1 {
+    font-size: 40px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.work-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 40px 0;
+}
+
+.work-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.work-content .img {
+    padding-bottom: 20px;
+}
+
+.work-content h4 {
+    padding-bottom: 20px;
+}
+
+.work-content .text {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.stats {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 200px 0;
+}
+
+.stat-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-bottom: 60px;
+}
+
+.stat-top h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.stat-top h4 {
+    text-align: center;
+}
+
+.stat-bottom {
+    width: 60%;
+    text-align: center;
+    background-color: rgb(143, 244, 143);
+    padding: 0 20px 30px 20px;
+    border-radius: 20px;
+}
+
+.stat-bottom h3 {
+    font-weight: bold;
+    line-height: 40px;
+    padding-top: 40px;
 }
 
 
