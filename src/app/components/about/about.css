@@ -95,6 +95,7 @@ html, body {
     color: white;
     border-radius: 30px;
     cursor: pointer;
+    transition-duration: 0.4s; 
 }
 
 .nav-right .btn:hover {
@@ -259,7 +260,7 @@ html, body {
 .stat-bottom {
     width: 60%;
     text-align: center;
-    background-color: rgb(143, 244, 143);
+    background-image: linear-gradient(200deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
     padding: 0 20px 30px 20px;
     border-radius: 20px;
 }
@@ -270,12 +271,77 @@ html, body {
     padding-top: 40px;
 }
 
+.team {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+}
 
+.team-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.team-info img {
+    width: 200px;
+    height: 180px;
+    border-radius: 50%;
+}
 
+.team-info h1 {
+    font-size: 40px;
+    font-weight: 100;
+    padding: 20px 0;
+}
 
+.team-info h2 {
+    font-size: 30px;
+    font-weight: 100;
+    padding-bottom: 40px;
+}
 
+.join {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 200px 0;
+}
 
+.join h1 {
+    text-transform: uppercase;
+    font-weight: 100;
+    padding-bottom: 60px;
+}
+
+.join h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 40px;
+}
+
+.join button{
+    font-size: 16px;
+    font-weight: 100;
+    width: 160px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-image: linear-gradient(200deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.4s; 
+}
+
+.join button:hover {
+    color: black;
+}
 
 
 /* Footer */
@@ -340,6 +406,7 @@ html, body {
 
 .right .btn {
     padding-bottom: 20px;
+
 }
 
 .right .btn button {
@@ -368,6 +435,7 @@ html, body {
 .footer-right .btn {
     padding-bottom: 30px;
     padding-left: 100px;
+    transition-duration: 0.4s; 
 }
 
 .footer-right .btn button {
@@ -408,6 +476,23 @@ html, body {
         display: block;
     }
 
+    .about {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .about-right {
+        width: 100%;
+    }
 
 
 

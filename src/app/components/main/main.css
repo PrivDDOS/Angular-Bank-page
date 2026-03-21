@@ -95,6 +95,7 @@ html, body {
     color: white;
     border-radius: 30px;
     cursor: pointer;
+    transition-duration: 0.4s; 
 }
 
 .nav-right .btn:hover {
@@ -351,6 +352,7 @@ html, body {
     color: white;
     border-radius: 30px;
     cursor: pointer;
+    transition-duration: 0.4s; 
 }
 
 .footer-right .btn button:hover {
