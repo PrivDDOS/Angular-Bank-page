@@ -208,8 +208,6 @@ html, body {
 
 .work-container {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
     margin: 40px 0;
 }
 
@@ -307,6 +305,7 @@ html, body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     margin: 200px 0;
 }
 
@@ -494,7 +493,55 @@ html, body {
         width: 100%;
     }
 
+    .story {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin: 30px 0;
+    }
 
+    .story-left {
+        width: 100%;
+    }
+    .story-right {
+        width: 100%;
+    }
+
+    .story-right img {
+        padding: 40px 0;
+    }
+
+    .work-container {
+        display: block;
+    }
+
+    .work-container .text {
+        width: 50%;
+        padding-bottom: 30px;
+    }
+
+    .stat-top {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .stat-top .user,
+    .stat-top .country,
+    .stat-top .time,
+    .stat-top .support {
+        padding-bottom: 26px;
+    }
+
+    .stat-bottom {
+        width: 80%;
+    }
+
+    .team {
+        display: block;
+    }
 
 
     #footer {
