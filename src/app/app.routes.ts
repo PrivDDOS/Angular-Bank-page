@@ -3,6 +3,7 @@ import { MainComponents } from './components/main/main';
 import { AboutComponents } from './components/about/about';
 import { ContactComponent } from './components/contact/contact';
 import { BlogComponent } from './components/blog/blog';
+import { CareersComponent } from './components/careers/careers';
 
 export const routes: Routes = [
     {
@@ -20,5 +21,9 @@ export const routes: Routes = [
     {
         path: 'blog',
         component: BlogComponent
+    },
+    {
+        path: 'careers',
+        component: CareersComponent
     }
 ];
