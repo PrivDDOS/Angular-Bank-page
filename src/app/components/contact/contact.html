@@ -74,7 +74,7 @@
             <div class="contact-container">
                 <h1>Contact Us</h1>
                 <h3>Feel interested in our Bank? Contact us now!!!</h3>
-                <a href=".form">&#x21E9;</a>
+                <a href="/contact/#form">&#x21E9;</a>
             </div>
         </div>
 
@@ -108,22 +108,64 @@
 
             </div>
 
+            <div class="option-bottom">
+                <h1>Or</h1>
+            </div>
+
         </div>
 
-        <div class="form">
+        <div id="form" class="form">
+
+            <div class="form-text">
+                <h1>Contact us through this form!!</h1>
+            </div>
             
-            <form action="/submit-contact" method="post">
-                <label for="name">Name</label><br>
-                <input id="name" name="name" type="text" placeholder="Enter your Name"><br>
+            <form class="form-container" method="post">
+                <label for="fname">Name</label><br>
+                <input id="fname" name="name" type="text" placeholder="Enter your Name"><br>
 
-                <label for="email">Email</label><br>
-                <input id="email" name="email" type="email" placeholder="Enter your Email"><br>
+                <label for="femail">Email</label><br>
+                <input id="femail" name="email" type="email" placeholder="Enter your Email"><br>
 
-                <label for="message">Message</label><br>
-                <textarea id="message" name="message" placeholder="Send Message"></textarea><br>
+                <label for="fmessage">Message</label><br>
+                <textarea id="fmessage" name="message" placeholder="Send Message"></textarea><br>
 
-                <input type="submit" value="Submit">
+                <div class="submit-btn">
+                    <input type="submit" value="Submit">
+                </div>
             </form>
+
+        </div>
+
+        <section class="map">
+            <h2>Our Office</h2>
+            <iframe
+                src="https://maps.google.com/maps?q=hanoi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="300"
+            ></iframe>
+        </section>
+
+        <div class="faq">
+
+            <div class="faq-text">
+                Faq
+            </div>
+
+            <div class="faq-container">
+                <h2>How fast is the support?</h2>
+                <p>Within 24 hours.</p>
+            </div>
+
+            <div class="faq-container">
+                <h2>How to open a bank account online?</h2>
+                <p>You can register straight from the website.</p>
+            </div>
+
+            <div class="faq-container">
+                <h2>What are the banking hours?</h2>
+                <p>hile branches have specific hours, online and mobile banking are available 24/7.</p>
+            </div>
 
         </div>
 
