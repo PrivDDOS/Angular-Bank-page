@@ -110,29 +110,220 @@ html, body {
 
 
 /* Main section */
-#main {
+#blog {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+.blog-top {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
 
+.blog-top .top-img {
+    width: 160px;
+    height: 80px;
+    background-image: url(/assets/images/logo-dark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.blog-top h1 {
+    font-size: 26px;
+    padding: 20px 0;
+}
 
+.blog-top h2 {
+    font-size: 22px;
+    font-weight: 100;
+    padding-bottom: 40px;
+}
 
+.blog-top .bottom-img {
+    width: 300px;
+    height: 220px;
+    background-image: url(/assets/images/blog-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.blog-body {
+    width: 100%;
+    height: auto;
+}
 
+.blog-body .feature {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.feature {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.feature h1 {
+    padding-bottom: 50px;
+}
 
+.feature .feature-post {
+    height: 400px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+}
 
+.feature-post .feature-img {
+    width: 100%;
+    height: 240px;
+    background-image: url(/assets/images/image-currency.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
 
+.feature-post h1 {
+    padding: 16px 0;
+    font-size: 24px;
+    font-weight: 100;
+}
 
+.feature-post button {
+    width: 80px;
+    height: 40px;
+    border: none;
+    background-image: linear-gradient(200deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition-duration: 0.4s; 
+}
 
+.feature-post button:hover {
+    color: black;
+}
 
+.blog-body .blogs {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.blogs .blogs-title {
+    padding-bottom: 30px;
+}
 
+.blogs .blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.blog-grid .blog-post {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px 40px 20px;
+}
+
+.blog-post .blog-img {
+    width: 100%;
+    height: 140px;
+    background-image: url(/assets/images/image-currency.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.blog-post h1 {
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+    padding: 20px;
+}
+
+.blog-post button {
+    width: 80px;
+    height: 40px;
+    border: none;
+    background-image: linear-gradient(200deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition-duration: 0.4s; 
+}
+
+.blog-post button:hover {
+    color: black;
+}
+
+.newsletter {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.newsletter h1 {
+    padding-bottom: 20px;
+}
+
+.newsletter-submit {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-submit input {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+.newsletter-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.newsletter-btn button {
+    width: 20%;
+    height: 40px;
+    border: none;
+    background-image: linear-gradient(200deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition-duration: 0.4s; 
+}
+
+.newsletter-btn button:hover {
+    color: black;
+}
 
 /* Footer */
 #footer {
@@ -265,7 +456,17 @@ html, body {
         display: block;
     }
 
+    .blogs .blog-grid {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
 
+    .blog-grid .blog-post {
+        width: 80%;
+    }
 
     #footer {
         width: 100%;
