@@ -1,0 +1,602 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Public Sans", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#container {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* Header section*/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    width: 100%;
+    padding: 0 32px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    z-index: 1002;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-mid {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-mid .nav-link {
+    height: 40px;
+    margin: 0 20px;
+}
+
+.nav-link button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: hsl(233, 8%, 62%);
+    padding-bottom: 4px;
+    border: none;
+}
+
+.nav-link button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: hsl(136, 64%, 51%);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease;
+}
+
+.nav-link button:hover {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-link button:hover::after,
+.nav-link button.active::after {
+    transform: scaleX(1);
+}
+
+.nav-right .btn {
+    width: 160px;
+    height: 40px;
+    border: none;
+    background-image: linear-gradient(200deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition-duration: 0.4s; 
+}
+
+.nav-right .btn:hover {
+    color: black;
+}
+
+.nav-right .mobile-menu {
+    display: none;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* Main section */
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 40px 0;
+}
+
+.hero .bottom-img {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-img .img {
+    padding: 0 40px;
+}
+
+.bottom-img .img img {
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.culture {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.culture h1 {
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.culture h3 {
+    width: 40%;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.culture-img {
+    text-align: center;
+    padding: 20px;
+}
+
+.culture-img img {
+    width: 450px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.culture-img h2 {
+    font-size: 28px;
+    font-weight: 100;
+    padding: 20px 0;
+}
+
+.culture-img h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.benefits {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px 0;
+}
+
+.benefits h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.benefits .card-container {
+    display: flex;
+    flex-direction: row;
+    padding: 100px 0;
+}
+
+.card-container .benefit-card {
+    padding: 0 20px;
+}
+
+.benefit-card h1 {
+    font-size: 26px;
+    font-weight: 100;
+}
+
+.jobs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jobs h1 {
+    font-size: 40px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.jobs .job-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.job-container .job-card {
+    width: 60%;
+    height: 160px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.job-container .job-card:hover {
+    border: 1px solid hsl(136, 64%, 51%);
+}
+
+.job-card h1 {
+    font-size: 30px;
+}
+
+.job-card p {
+    font-size: 22px;
+    padding: 20px 0;
+}
+
+.job-card h2 {
+    font-size: 26px;
+    font-weight: 100;
+}
+
+.process {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.process-top {
+    padding-bottom: 80px;
+}
+
+.process-top h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.process-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 40px 0;
+}
+
+.process-bottom .send,
+.process-bottom .review,
+.process-bottom .interview {
+    text-align: center;
+}
+
+.send .number,
+.review .number,
+.interview .number {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.number div {
+    width: 22px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.process-bottom .line {
+    width: 10%;
+    height: 0;
+    border: 1px solid green;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.contact h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.contact p {
+    padding: 20px 0;
+}
+
+.contact button {
+    font-size: 16px;
+    font-weight: 100;
+    text-transform: uppercase;
+    width: 160px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-image: linear-gradient(200deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.4s; 
+}
+
+.contact button:hover {
+    color: black;
+}
+
+
+
+
+/* Footer */
+#footer {
+    width: 100%;
+    height: 200px;
+    background-color: hsl(233, 26%, 24%);
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-left {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 60px;
+}
+
+.footer-left .left {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+}
+
+.left .top-img {
+    padding-bottom: 40px;
+}
+
+.left .bottom-img {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-left .mid {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.mid .btn {
+    padding-bottom: 20px;
+}
+
+.mid .btn button {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.mid .btn button:hover {
+    cursor: pointer;
+    color: rgb(7, 139, 7);
+}
+
+.footer-left .right {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.right .btn {
+    padding-bottom: 20px;
+}
+
+.right .btn button {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.right .btn button:hover {
+    cursor: pointer;
+    color: rgb(7, 139, 7);
+}
+
+.bottom-img .social-icon {
+    cursor: pointer;
+}
+
+.footer-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-right .btn {
+    padding-bottom: 30px;
+    padding-left: 100px;
+}
+
+.footer-right .btn button {
+    width: 160px;
+    height: 40px;
+    border: none;
+    background-image: linear-gradient(200deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition-duration: 0.4s; 
+}
+
+.footer-right .btn button:hover {
+    color: black;
+}
+
+.footer-right .trademark {
+    color: white;
+}
+
+.trademark .copyright {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+
+/* Responsive CSS */
+@media only screen and (max-width: 768px) {
+    .nav-mid {
+        display: none;
+    }
+
+    .nav-right .btn {
+        display: none;
+    }
+
+    .nav-right .mobile-menu {
+        display: block;
+    }
+
+    .benefits .card-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero {
+        height: 1400px;
+    }
+
+    .hero .bottom-img {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bottom-img .img {
+        padding-bottom: 20px;
+    }
+
+    .culture h3 {
+        width: 80%;
+    }
+
+    .card-container .benefit-card {
+        padding-bottom: 20px;
+    }
+
+    .job-container .job-card {
+        height: auto;
+    }
+
+    #footer {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .footer-left .left {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .left .top-img {
+        padding-bottom: 40px;
+    }
+
+    .left .bottom-img {
+        display: flex;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    .footer-left .mid {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mid .btn {
+        padding-bottom: 20px;
+    }
+
+    .footer-left .right {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .right .btn {
+        padding-bottom: 20px;
+    }
+
+    .footer-right {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-right .btn {
+        padding-left: 0;
+        padding-bottom: 30px;
+    }
+}
