@@ -255,16 +255,18 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
     padding-top: 20px;
 }
 
-.submit-btn input {
-    width: 20%;
+.submit-btn button {
+    width: 16%;
+    height: 40px;
     cursor: pointer;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
-.submit-btn input:hover {
+.submit-btn button:hover {
     background-color: black;
     color: white;
     border: none;
@@ -307,6 +309,7 @@ html, body {
     border: 1px solid black;
     padding: 40px;
     margin-bottom: 20px;
+    cursor: pointer;
     transition-duration: 0.4s;
 }
 

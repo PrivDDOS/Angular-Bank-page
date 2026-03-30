@@ -124,20 +124,23 @@
                 <h1>Contact us through this form!!</h1>
             </div>
             
-            <form class="form-container" method="post">
+            <form class="form-container" (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
                 <label for="fname">Name</label><br>
-                <input id="fname" name="name" type="text" placeholder="Enter your Name"><br>
+                <input id="fname" name="name" type="text" placeholder="Enter your Name" [(ngModel)]="request.name" required><br>
 
                 <label for="femail">Email</label><br>
-                <input id="femail" name="email" type="email" placeholder="Enter your Email"><br>
+                <input id="femail" name="email" type="email" placeholder="Enter your Email" [(ngModel)]="request.email" required><br>
 
                 <label for="fmessage">Message</label><br>
-                <textarea id="fmessage" name="message" placeholder="Send Message"></textarea><br>
+                <textarea id="fmessage" name="message" placeholder="Send Message" [(ngModel)]="request.message" required></textarea><br>
 
                 <div class="submit-btn">
-                    <input type="submit" value="Submit">
+                    <button type="submit">Submit</button>
                 </div>
             </form>
+            <div *ngIf="status" class="submit-status">
+                <p>{{ status }}</p>
+            </div>
 
         </div>
 
